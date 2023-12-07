@@ -1,0 +1,24 @@
+{
+  "name": "salat-or-not",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint",
+    "production": "aws s3 sync out s3://datarozhlas/salat-or-not --acl public-read && aws cloudfront create-invalidation --distribution-id E3ABKG4QXPTL3P --paths '/salat-or-not/*'",
+    "images": "aws s3 sync public s3://datarozhlas/salat-or-not --acl public-read && aws cloudfront create-invalidation --distribution-id E3ABKG4QXPTL3P --paths '/salat-or-not/*'"
+  },
+  "dependencies": {
+    "@types/node": "18.11.12",
+    "@types/react": "18.0.26",
+    "@types/react-dom": "18.0.9",
+    "eslint": "8.29.0",
+    "eslint-config-next": "13.0.6",
+    "next": "13.0.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.9.4"
+  }
+}
