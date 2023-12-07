@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: "/salat-or-not",
+  basePath: "/darek-or-not",
   images: {
     unoptimized: true,
   },

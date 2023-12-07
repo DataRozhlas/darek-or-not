@@ -1,4 +1,4 @@
-// const url = "https://data.irozhlas.cz/hot-or-not-data/salaty.json";
+// const url = "https://data.irozhlas.cz/hot-or-not-data/darky.json";
 // const res = await fetch(url);
 // const rawdata = await res.json();
 // const data = rawdata.filter((item: { use: boolean }) => item.use);
@@ -20,5 +20,5 @@
 //   };
 // });
 
-// Deno.writeTextFileSync("salat-stats.json", JSON.stringify(result));
-export {};
+// Deno.writeTextFileSync("darky-stats.json", JSON.stringify(result));
+// export {};
