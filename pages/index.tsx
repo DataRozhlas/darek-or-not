@@ -23,7 +23,7 @@ export default function Home(props: { data: [] }) {
 
   useEffect(() => {
     const url =
-      "https://datarozhlas.s3.eu-central-1.amazonaws.com/hot-or-not-results/salat-stats.json";
+      "https://datarozhlas.s3.eu-central-1.amazonaws.com/hot-or-not-results/darky-stats.json";
     fetch(url)
       .then(res => res.json())
       .then(data => {
@@ -37,7 +37,7 @@ export default function Home(props: { data: [] }) {
   return (
     <>
       <Head>
-        <title>Co patří do vánočního bramborového salátu?</title>
+        <title>Co byste chtěli k Vánocům</title>
         <meta
           key="share-image"
           property="og:image"
@@ -75,11 +75,11 @@ export default function Home(props: { data: [] }) {
       </Head>
       {props.data.length > 0 && (
         <div className={styles.container}>
-          <Header text="Co patří do vánočního bramborového salátu?"></Header>
+          <Header text="Co by vás potěšilo víc?"></Header>
           <h3 className={styles.subtitle}>
             {history.length > 0
-              ? `Vyberte další ingredienci`
-              : "Klikněte na jednu z ingrediencí"}
+              ? `Vyberte další dárek`
+              : "Klikněte na jeden z dárků"}
           </h3>
           <MainPanel
             data={props.data}
@@ -102,31 +102,20 @@ export default function Home(props: { data: [] }) {
             </Link>
           </div>
           <div className={styles.text}>
+            <p><strong>
+              Datový tým Českého rozhlasu hledá vánoční dárky, které potěší každého. Můžete s tím pomoci minutou bezmyšlenkovitého klikání.
+            </strong></p>
             <p>
-              Z různých receptů na bramborový salát jsme vybrali 43 přísad.
-              Některé jsou těžko nahraditelné, typicky brambory. Některé jsou
-              dlouhodobě kontroverzní, například měkký či tvrdý salám. A některé
-              leží za hranicí společenských konvencí, třeba tvarůžky nebo
-              avokádo.
+              Vybrat blízkému člověku konkrétní dárek, který se nemusí líbit, nebo raději věnovat neosobní poukaz? Je pověst tvrdých hranatých balíčků jako těch hodnotnějších darů oprávněná? Příčí se nám přijímat o Vánocích hotovost či alkohol, nebo se na věc díváme pragmaticky? Odpovědi na otázky, jež vrtaly hlavou několika generacím, budeme znát ještě tento týden. Pomůže nám k nim stejný rozstřel jeden na jednoho, kterým jsme loni definitivně <a href="https://www.irozhlas.cz/zivotni-styl/vareni-jidlo/bramborovy-salat-ingredience-vysledky_2212220600_pek" target="_blank" className="odkaz">rozlouskli přijatelnost přísad do bramborových salátů</a>. Potřebujeme jenom chvíli vašeho času.
+
             </p>
             <p>
-              V přímém souboji 1:1 můžete do omrzení vybírat, co se vám v
-              chutném nebo alespoň poživatelném bramborovém salátu představuje
-              snáze. Redakce serveru iROZHLAS.cz výsledky všech duelů
-              zaznamenává. Vyhodnotí je a výsledný žebříček zveřejní ještě před
-              Štědrým dnem, aby šlo data využít k racionální argumentaci při
-              svátečních setkáních.
+            V primitivní interaktivní aplikaci jednoduše klepnete na to, co byste sami dostali k Vánocům raději. Představte si, že vám to nadělí někdo z běžné skupiny lidí, se kterými si vyměňujete dárky. Nevíte však, kdo přesně. O konkrétní podobě dárku (jaký vzor má šála, ve kterých kinech platí kupon atd.) rozhoduje darující, pro vás to bude překvapení.
             </p>
             <p>
-              Ilustrace přísad jsme vytvořili v AI generátoru Stable Diffusion
-              na základě zadání zmiňujících „československý grafický design“,
-              což dává většině obrázků kýžený mírně pelíškovský vibe. Při tomto
-              průzkumu bojem vyšlo najevo, že nástroj natrénovaný na globálním
-              datasetu není vhodný pro vizualizaci lokálních specialit; omluvte
-              proto nedůvěryhodnou podobu salámu Junior, olomouckých syrečků a
-              celerové bulvy. Ve všech případech jsme se k alespoň přibližné
-              podobě museli dostat složitým opisem.
+            Dárky pro srovnání jsme vybrali podle jednoduchých klíčů: jde o dary kupované, maximálně za vyšší stovky korun, nijak zvlášť originální, neberoucí v potaz pohlaví, koníčky ani například preferovaný způsob přepravy obdarovávaných. Nenajdete tedy mezi nimi zájezd k moři, akvarijní rybičky ani škrabku na auto. Předpokládáme však běžný životní styl - tedy že obdarovaní párkrát za rok vyrazí za kulturou či sportem nebo se občas napijí alkoholu.
             </p>
+            <p><em>Ilustrační obrázky jsme vygenerovali ve Stable Diffusion, po kterém jsme chtěli ilustrace ve stylu východoevropského grafického designu 60. let.</em></p>
           </div>
           <RelatedArticles tag={85699} name={"Vánocích"}></RelatedArticles>
         </div>
@@ -137,7 +126,7 @@ export default function Home(props: { data: [] }) {
 
 export async function getStaticProps() {
   const data = await fetch(
-    "https://data.irozhlas.cz/hot-or-not-data/salaty.json"
+    "https://data.irozhlas.cz/hot-or-not-data/darky.json"
   ).then(res => res.json());
   return {
     props: {

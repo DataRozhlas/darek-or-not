@@ -14,13 +14,15 @@ exports.handler = async (event, context, callback) => {
     let requestJSON = JSON.parse(event.body);
     await dynamo
       .put({
-        TableName: "salat-or-not",
+        TableName: "darek-or-not",
         Item: {
           uid: Date.now() + Math.random(),
           appID: requestJSON.appID,
           winnerID: requestJSON.winnerID,
           url: requestJSON.url,
           ref: requestJSON.ref,
+          age: requestJSON.age,
+          sex: requestJSON.sex,
           loserID: requestJSON.loserID,
           draw: requestJSON.draw,
           ip: event.headers["x-forwarded-for"],

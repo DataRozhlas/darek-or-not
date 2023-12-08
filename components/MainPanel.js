@@ -32,26 +32,39 @@ const pickRandomCandidates = (candidates, prevCandidates) => {
   return result;
 };
 
+
 const MainPanel = props => {
   const router = useRouter();
   const [candidates, setCandidates] = useState([props.data[0], props.data[1]]);
+  const [sex, setSex] = useState("all");
+  const [age, setAge] = useState("all");
   let lastClickTime = Date.now();
+
+  const handleSexChange = (e) => {
+    setSex(e.target.id);
+  }  
+
+  const handleAgeChange = (e) => {
+    setAge(e.target.id);
+  }  
 
   const buttonClickHandler = candidate => {
     if (Date.now() - lastClickTime > 0) {
       // save tip to dynamodb
       const http = new XMLHttpRequest();
       const url =
-        "https://g4afegr7dnm4rdsbhjzkmuyo3y0uhose.lambda-url.eu-central-1.on.aws/";
+        "https://2sc7lqahghwdegw3ke7pctis7i0twier.lambda-url.eu-central-1.on.aws/";
       http.open("POST", url);
       http.send(
         JSON.stringify({
-          appID: "salat",
+          appID: "darky",
           winnerID: candidate.id,
           loserID: candidates.filter(c => c.id !== candidate.id)[0].id,
           url: document.URL,
           ref: document.referrer,
           draw: false,
+          age: age,
+          sex: sex
         })
       );
     }
@@ -77,15 +90,51 @@ const MainPanel = props => {
   }, [props.data, props.history]);
 
   return (
-    <main className={styles.container}>
-      <Item
-        candidate={candidates[0]}
-        buttonClickHandler={buttonClickHandler}
-      ></Item>
-      <Item
-        candidate={candidates[1]}
-        buttonClickHandler={buttonClickHandler}
-      ></Item>
+    <main>
+      <div className={styles.container}>
+        <Item
+          candidate={candidates[0]}
+          buttonClickHandler={buttonClickHandler}
+        ></Item>
+        <Item
+          candidate={candidates[1]}
+          buttonClickHandler={buttonClickHandler}
+        ></Item>
+      </div>
+      <div className={styles.infoContainer}>
+
+        <fieldset className={styles.radioContainer}>
+          <legend>Jste</legend>
+          <div>
+            <input className={styles.input} type="radio" id="f" name="sex" value="f" onClick={handleSexChange} />
+            <label for="f" >žena</label>
+          </div>
+          <div>
+            <input className={styles.input} type="radio" id="m" name="sex" value="f" onClick={handleSexChange} />
+            <label for="m">muž</label>
+          </div>
+        </fieldset>
+        <fieldset className={styles.radioContainer}>
+          <legend>Je vám</legend>
+          <div>
+            <input className={styles.input} type="radio" id="a20" name="age" value="a20" onClick={handleAgeChange} />
+            <label>méně než 20 let</label>
+          </div>
+          <div>
+            <input className={styles.input} type="radio" id="a40" name="age" value="a40" onClick={handleAgeChange} />
+            <label>20 - 40 let</label></div>
+          <div>
+            <input className={styles.input} type="radio" id="a60" name="age" value="a60" onClick={handleAgeChange} />
+            <label>přes 40 let</label></div>
+        </fieldset>
+
+        <div>
+          Pro kvalitnější vyhodnocení odpovědí se prosím zařaďte do základních populačních skupin. Vaše osobní data se nikde neukládají.
+
+        </div>
+
+      </div>
+
     </main>
   );
 };

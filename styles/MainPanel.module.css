@@ -4,3 +4,28 @@
   flex-wrap: nowrap;
   justify-items: space-between;
 }
+
+.infoContainer {
+  gap: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  max-width: 515px;
+}
+
+.radioContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+  gap: 0.8rem;
+  max-width: 515px;
+}
+
+.input {
+  cursor: pointer;
+}

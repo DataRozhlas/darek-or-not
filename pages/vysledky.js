@@ -11,7 +11,7 @@ export default function Vysledky(props) {
 
   useEffect(() => {
     const url =
-      "https://datarozhlas.s3.eu-central-1.amazonaws.com/hot-or-not-results/salat-stats.json";
+      "https://datarozhlas.s3.eu-central-1.amazonaws.com/hot-or-not-results/darky-stats.json";
     fetch(url)
       .then(res => res.json())
       .then(data => {
@@ -22,7 +22,7 @@ export default function Vysledky(props) {
   return (
     <>
       <Head>
-        <title>Nejoblíbenější ingredience do bramborového salátu</title>
+        <title>Nejoblíbenější vánoční dárky</title>
         <meta
           key="share-image"
           property="og:image"
@@ -60,14 +60,14 @@ export default function Vysledky(props) {
       </Head>
 
       <div className={styles.container}>
-        <Header text="Nejoblíbenější ingredience do bramborového salátu"></Header>
+        <Header text="Nejoblíbenější vánoční dárky"></Header>
         <div className={styles.buttonContainer}>
           <Link href="/">
             <button className={styles.button}>Zpět k hlasování</button>
           </Link>
         </div>
         <h3 className={`${styles.subtitle} ${styles.moveup}`}>
-          Kliknutím na přísadu zobrazíte podrobnosti
+          Kliknutím na dárek zobrazíte podrobnosti
         </h3>
         <ResultsPanel
           results={results}
@@ -82,7 +82,7 @@ export default function Vysledky(props) {
 
 export async function getStaticProps() {
   const data = await fetch(
-    "https://data.irozhlas.cz/hot-or-not-data/salaty.json"
+    "https://data.irozhlas.cz/hot-or-not-data/darky.json"
   ).then(res => res.json());
   return {
     props: {

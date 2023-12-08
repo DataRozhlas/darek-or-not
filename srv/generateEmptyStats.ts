@@ -21,4 +21,4 @@
 // });
 
 // Deno.writeTextFileSync("darky-stats.json", JSON.stringify(result));
-// export {};
+export {};

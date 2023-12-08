@@ -17,7 +17,7 @@ const NavBar = () => {
         >
           <Image
             alt="iROZHLAS.cz"
-            src="https://data.irozhlas.cz/salat-or-not/img/irozhlas.svg"
+            src="https://data.irozhlas.cz/darek-or-not/img/irozhlas.svg"
             height={50}
             width={120}
           ></Image>

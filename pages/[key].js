@@ -11,7 +11,7 @@ import styles from "../styles/Home.module.css";
 const DetailsPage = props => {
   useEffect(() => {
     const url =
-      "https://datarozhlas.s3.eu-central-1.amazonaws.com/hot-or-not-results/salat-stats.json";
+      "https://datarozhlas.s3.eu-central-1.amazonaws.com/hot-or-not-results/darky-stats.json";
     fetch(url)
       .then(res => res.json())
       .then(data => {
@@ -34,7 +34,7 @@ const DetailsPage = props => {
     <>
       <Head>
         <title>
-          {`Průběžné výsledky ${candidateDetails.genitiv} v rozstřelu bramborových salátů`}
+          {`Průběžné výsledky ${candidateDetails.genitiv} v rozstřelu vánočních dárků`}
         </title>
         <meta
           key="share-image"
@@ -83,7 +83,7 @@ const DetailsPage = props => {
           <div className={styles.candidateProfileContainer}>
             <Image
               className={styles.image}
-              src={`https://data.irozhlas.cz/salat-or-not/img/${candidateDetails.key}-300.png`}
+              src={`https://data.irozhlas.cz/darek-or-not/img/${candidateDetails.key}-300.png`}
               alt={candidateDetails.name}
               width={200}
               height={200}
@@ -117,7 +117,7 @@ const DetailsPage = props => {
 
 export async function getStaticPaths() {
   const data = await fetch(
-    "https://data.irozhlas.cz/hot-or-not-data/salaty.json"
+    "https://data.irozhlas.cz/hot-or-not-data/darky.json"
   ).then(res => res.json());
 
   return {
@@ -128,7 +128,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps() {
   const data = await fetch(
-    "https://data.irozhlas.cz/hot-or-not-data/salaty.json"
+    "https://data.irozhlas.cz/hot-or-not-data/darky.json"
   ).then(res => res.json());
   return {
     props: {

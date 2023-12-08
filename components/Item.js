@@ -14,7 +14,7 @@ const Item = props => {
       <div className={styles["image-wrapper"]}>
         <Image
           className={styles.image}
-          src={`https://data.irozhlas.cz/salat-or-not/img/${props.candidate.key}-300.png`}
+          src={`https://data.irozhlas.cz/darek-or-not/img/${props.candidate.key}-300.png`}
           alt={props.candidate.name}
           width={300}
           height={300}

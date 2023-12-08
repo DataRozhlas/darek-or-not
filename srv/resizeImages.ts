@@ -18,3 +18,4 @@
 //   );
 //   Deno.writeFileSync(`../public/img/${item.key}-75.png`, img);
 // });
+export {};
