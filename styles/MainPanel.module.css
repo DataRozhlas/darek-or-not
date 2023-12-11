@@ -15,6 +15,7 @@
   margin-right: auto;
   margin-top: 3rem;
   max-width: 515px;
+  padding: 0 0.4rem;
 }
 
 .radioContainer {
@@ -28,4 +29,13 @@
 
 .input {
   cursor: pointer;
+}
+
+.inputOption {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+  align-items: center;
+  gap: 0.1rem;
 }

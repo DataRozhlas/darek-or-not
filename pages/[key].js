@@ -39,20 +39,20 @@ const DetailsPage = props => {
         <meta
           key="share-image"
           property="og:image"
-          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_facebook/public/uploader/screen_shot_2022-12-_221213-141303_pek.png?itok=spfC2SIE"
+          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_facebook/public/uploader/screenshot_2023-12-1_231211-145214_pek.png?itok=jFPMfLNa"
         />
         <meta
           property="og:title"
-          content={`Průběžné výsledky ${candidateDetails.genitiv} v rozstřelu bramborových salátů`}
+          content={`Průběžné výsledky ${candidateDetails.genitiv} v rozstřelu vánočních dárků`}
         />
         <meta
           property="og:url"
-          content="https://data.irozhlas.cz/salat-or-not/"
+          content="https://data.irozhlas.cz/darek-or-not/"
         />
         <meta
           property="og:description"
           content={
-            "Pobavte se interaktivním rozstřelem základních i obskurních ingrediencí do vánočního salátu. Anonymní data vyhodnotíme v objevných žebříčcích."
+            "Datový tým Českého rozhlasu hledá vánoční dárky, které potěší každého. Můžete s tím pomoci minutou bezmyšlenkovitého klikání."
           }
         />
         <meta name="twitter:card" content="summary_large_image" />
@@ -60,15 +60,15 @@ const DetailsPage = props => {
         <meta name="twitter:creator" content="@datarozhlas" />
         <meta
           name="twitter:title"
-          content={`Průběžné výsledky ${candidateDetails.genitiv} v rozstřelu bramborových salátů`}
+          content={`Průběžné výsledky ${candidateDetails.genitiv} v rozstřelu vánočních dárků`}
         />
         <meta
           name="twitter:image"
-          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_twitter/public/uploader/screen_shot_2022-12-_221213-141303_pek.png?itok=POguUL9s"
+          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_twitter/public/uploader/screenshot_2023-12-1_231211-145214_pek.png?itok=nRNn6Te9"
         />
         <meta
           name="twitter:description"
-          content="Pobavte se interaktivním rozstřelem základních i obskurních ingrediencí do vánočního salátu. Anonymní data vyhodnotíme v objevných žebříčcích."
+          content="Datový tým Českého rozhlasu hledá vánoční dárky, které potěší každého. Můžete s tím pomoci minutou bezmyšlenkovitého klikání."
         />
       </Head>
       {candidateDetails && results.length > 0 && (

@@ -42,11 +42,11 @@ const MainPanel = props => {
 
   const handleSexChange = (e) => {
     setSex(e.target.id);
-  }  
+  }
 
   const handleAgeChange = (e) => {
     setAge(e.target.id);
-  }  
+  }
 
   const buttonClickHandler = candidate => {
     if (Date.now() - lastClickTime > 0) {
@@ -116,20 +116,23 @@ const MainPanel = props => {
         </fieldset>
         <fieldset className={styles.radioContainer}>
           <legend>Je vám</legend>
-          <div>
-            <input className={styles.input} type="radio" id="a20" name="age" value="a20" onClick={handleAgeChange} />
-            <label>méně než 20 let</label>
+          <div className={styles.inputOption}>
+            <input className={styles.input} type="radio" id="a1" name="age" value="a20" onClick={handleAgeChange} />
+            <label>míň než&nbsp;25&nbsp;let</label>
           </div>
-          <div>
-            <input className={styles.input} type="radio" id="a40" name="age" value="a40" onClick={handleAgeChange} />
-            <label>20 - 40 let</label></div>
-          <div>
-            <input className={styles.input} type="radio" id="a60" name="age" value="a60" onClick={handleAgeChange} />
-            <label>přes 40 let</label></div>
+          <div className={styles.inputOption}>
+            <input className={styles.input} type="radio" id="a2" name="age" value="a40" onClick={handleAgeChange} />
+            <label>25&nbsp;-&nbsp;40</label></div>
+          <div className={styles.inputOption}>
+            <input className={styles.input} type="radio" id="a3" name="age" value="a60" onClick={handleAgeChange} />
+            <label>41&nbsp;-&nbsp;65</label></div>
+          <div className={styles.inputOption}>
+            <input className={styles.input} type="radio" id="a4" name="age" value="a60" onClick={handleAgeChange} />
+            <label>přes 65&nbsp;let</label></div>
         </fieldset>
 
         <div>
-          Pro kvalitnější vyhodnocení odpovědí se prosím zařaďte do základních populačních skupin. Vaše osobní data se nikde neukládají.
+          <em><small>Pro kvalitnější vyhodnocení odpovědí se prosím zařaďte do základních populačních skupin. Vaše osobní data se nikde neukládají.</small></em>
 
         </div>
 
