@@ -155,7 +155,7 @@ exports.handler = async (event, context) => {
     const newLastID =
       jenPlatne.length > 0
         ? Math.max(...jenPlatne.map(item => item.uid))
-        : lastID;
+        : lastID.lastID;
 
     await uploadFileOnS3(result, "hot-or-not-results/darky-stats.json");
     await uploadFileOnS3(

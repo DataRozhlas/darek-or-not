@@ -115,7 +115,7 @@ export default function Home(props: { data: [] }) {
             <p>
             Dárky pro srovnání jsme vybrali podle jednoduchých klíčů: jde o dary kupované, maximálně za vyšší stovky korun, nijak zvlášť originální, neberoucí v potaz pohlaví, koníčky ani například preferovaný způsob přepravy obdarovávaných. Nenajdete tedy mezi nimi zájezd k moři, akvarijní rybičky ani škrabku na auto. Předpokládáme však běžný životní styl - tedy že obdarovaní párkrát za rok vyrazí za kulturou či sportem nebo se občas napijí alkoholu.
             </p>
-            <p><em>Ilustrační obrázky jsme vygenerovali ve Stable Diffusion, po kterém jsme chtěli ilustrace ve stylu východoevropského grafického designu 60. let.</em></p>
+            <p><em>Ilustrační obrázky jsme vygenerovali ve Stable Diffusion a DALL-E, chtěli jsme po nich ilustrace ve stylu východoevropského grafického designu 60. let.</em></p>
           </div>
           <RelatedArticles tag={85699} name={"Vánocích"}></RelatedArticles>
         </div>
