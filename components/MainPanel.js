@@ -107,11 +107,11 @@ const MainPanel = props => {
           <legend>Jste</legend>
           <div>
             <input className={styles.input} type="radio" id="f" name="sex" value="f" onClick={handleSexChange} />
-            <label for="f" >žena</label>
+            <label htmlFor="f" >žena</label>
           </div>
           <div>
             <input className={styles.input} type="radio" id="m" name="sex" value="f" onClick={handleSexChange} />
-            <label for="m">muž</label>
+            <label htmlFor="m">muž</label>
           </div>
         </fieldset>
         <fieldset className={styles.radioContainer}>
