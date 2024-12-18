@@ -106,6 +106,7 @@ const MainPanel = props => {
           buttonClickHandler={buttonClickHandler}
         ></Item>
       </div>
+      {/* 
       <div className={styles.infoContainer}>
 
         <fieldset className={styles.radioContainer}>
@@ -141,7 +142,7 @@ const MainPanel = props => {
 
         </div>
 
-      </div>
+      </div> */}
 
     </main>
   );

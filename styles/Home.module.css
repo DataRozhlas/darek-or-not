@@ -118,6 +118,11 @@
   margin: 0 auto;
 }
 
+.underlined {
+  text-decoration: underline;
+  color: darkblue;
+}
+
 @media screen and (min-width: 700px) {
   .resultsContainer {
     margin-top: 1.5rem;
@@ -141,3 +146,4 @@
     margin-bottom: 1.2rem;
   }
 }
+

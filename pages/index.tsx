@@ -103,19 +103,15 @@ export default function Home(props: { data: [] }) {
           </div>
           <div className={styles.text}>
             <p><strong>
-              Datový tým Českého rozhlasu hledá vánoční dárky, které potěší každého. Můžete s tím pomoci minutou bezmyšlenkovitého klikání.
+              V máslovém oktagonu se rozhodne o šampionovi patrových podnosů. Přispěje k tomu minuta vašeho bezmyšlenkovitého klikání.
             </strong></p>
             <p>
-              Vybrat blízkému člověku konkrétní dárek, který se nemusí líbit, nebo raději věnovat neosobní poukaz? Je pověst tvrdých hranatých balíčků jako těch hodnotnějších darů oprávněná? Příčí se nám přijímat o Vánocích hotovost či alkohol, nebo se na věc díváme pragmaticky? Odpovědi na otázky, jež vrtaly hlavou několika generacím, budeme znát ještě tento týden. Pomůže nám k nim stejný rozstřel jeden na jednoho, kterým jsme loni definitivně <a href="https://www.irozhlas.cz/zivotni-styl/vareni-jidlo/bramborovy-salat-ingredience-vysledky_2212220600_pek" target="_blank" className="odkaz">rozlouskli přijatelnost přísad do bramborových salátů</a>. Potřebujeme jenom chvíli vašeho času.
-
+              Datový tým Českého rozhlasu už vyřešil dvě ze tří největších vánočních záhad. S pomocí vás, čtenářů a čtenářek serveru iROZHLAS.cz, předloni zjistil, že <a className={styles.underlined} href="https://www.irozhlas.cz/zivotni-styl/vareni-jidlo/bramborovy-salat-ingredience-vysledky_2212220600_pek" target="_blank">čára oddělující přijatelné přísady do bramborových salátů od nepřijatelných</a> leží zhruba mezi celerem a tatarkou. Loni pak z podobného rozstřelu vzešel <a className={styles.underlined} href="https://www.irozhlas.cz/ekonomika/vanoce-darky-co-si-preji-cesi-data-anketa_2312210600_ksp" target="_blank">nejvděčnější vánoční dárek</a>, což je kniha či poukaz do knihkupectví, i dárek nejproblematičtější, tedy štěně. Zbývá zodpovědět otázku poslední: které cukroví nám chutná nejvíc?
             </p>
             <p>
-              V primitivní interaktivní aplikaci jednoduše klepnete na to, co byste sami dostali k Vánocům raději. Představte si, že vám to nadělí někdo z běžné skupiny lidí, se kterými si vyměňujete dárky. Nevíte však, kdo přesně. O konkrétní podobě dárku (jaký vzor má šála, ve kterých kinech platí kupon atd.) rozhoduje darující, pro vás to bude překvapení.
+              Data opět sbíráme jednoduchým systémem <em>hot or not</em>. Dokud vás to nepřestane bavit, vybírejte níže ze dvou cukroví to, po kterém byste sáhli raději. Neřešte při tom ceny surovin ani pracnost přípravy – pouze se krmte.
             </p>
-            <p>
-              Dárky pro srovnání jsme vybrali podle jednoduchých klíčů: jde o dary kupované, maximálně za vyšší stovky korun, nijak zvlášť originální, neberoucí v potaz pohlaví, koníčky ani například preferovaný způsob přepravy obdarovávaných. Nenajdete tedy mezi nimi zájezd k moři, akvarijní rybičky ani škrabku na auto. Předpokládáme však běžný životní styl - tedy že obdarovaní párkrát za rok vyrazí za kulturou či sportem nebo se občas napijí alkoholu.
-            </p>
-            <p><em>Ilustrační obrázky jsme vygenerovali ve Stable Diffusion a DALL-E, chtěli jsme po nich ilustrace ve stylu východoevropského grafického designu 60. let.</em></p>
+            <p><em>Autorkou fotografií je Zuzana Jarolímková.</em></p>
           </div>
           <RelatedArticles tag={85699} name={"Vánocích"}></RelatedArticles>
         </div>
