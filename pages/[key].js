@@ -11,7 +11,7 @@ import styles from "../styles/Home.module.css";
 const DetailsPage = props => {
   useEffect(() => {
     const url =
-      "https://datarozhlas.s3.eu-central-1.amazonaws.com/hot-or-not-results/darky-stats.json";
+      "https://datarozhlas.s3.eu-central-1.amazonaws.com/hot-or-not-results/cukrovi-stats.json";
     fetch(url)
       .then(res => res.json())
       .then(data => {
@@ -34,7 +34,7 @@ const DetailsPage = props => {
     <>
       <Head>
         <title>
-          {`Průběžné výsledky ${candidateDetails.genitiv} v rozstřelu vánočních dárků`}
+          {`Průběžné výsledky ${candidateDetails.genitiv} v rozstřelu vánočního cukroví`}
         </title>
         <meta
           key="share-image"
@@ -47,7 +47,7 @@ const DetailsPage = props => {
         />
         <meta
           property="og:url"
-          content="https://data.irozhlas.cz/darek-or-not/"
+          content="https://data.irozhlas.cz/cukrovi-or-not/"
         />
         <meta
           property="og:description"
@@ -76,14 +76,14 @@ const DetailsPage = props => {
           <Header text={candidateDetails.name}></Header>
           <h3 className={styles.subtitleDetail}>{`${Math.round(
             (candidateResults.w / (candidateResults.w + candidateResults.l)) *
-              100
+            100
           )} % vítězství z ${(
             candidateResults.w + candidateResults.l
           ).toLocaleString("cs-CZ")} duelů`}</h3>
           <div className={styles.candidateProfileContainer}>
             <Image
               className={styles.image}
-              src={`https://data.irozhlas.cz/darek-or-not/img/${candidateDetails.key}-300.png`}
+              src={`https://data.irozhlas.cz/cukrovi-or-not/img/${candidateDetails.key}-300.png`}
               alt={candidateDetails.name}
               width={200}
               height={200}
@@ -117,7 +117,7 @@ const DetailsPage = props => {
 
 export async function getStaticPaths() {
   const data = await fetch(
-    "https://data.irozhlas.cz/hot-or-not-data/darky.json"
+    "https://data.irozhlas.cz/hot-or-not-data/cukrovi.json"
   ).then(res => res.json());
 
   return {
@@ -128,7 +128,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps() {
   const data = await fetch(
-    "https://data.irozhlas.cz/hot-or-not-data/darky.json"
+    "https://data.irozhlas.cz/hot-or-not-data/cukrovi.json"
   ).then(res => res.json());
   return {
     props: {

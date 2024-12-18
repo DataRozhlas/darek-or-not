@@ -23,7 +23,7 @@ export default function Home(props: { data: [] }) {
 
   useEffect(() => {
     const url =
-      "https://datarozhlas.s3.eu-central-1.amazonaws.com/hot-or-not-results/darky-stats.json";
+      "https://datarozhlas.s3.eu-central-1.amazonaws.com/hot-or-not-results/cukrovi-stats.json";
     fetch(url)
       .then(res => res.json())
       .then(data => {
@@ -37,7 +37,7 @@ export default function Home(props: { data: [] }) {
   return (
     <>
       <Head>
-        <title>Co byste chtěli k Vánocům</title>
+        <title>Nejoblíbenější vánoční cukroví</title>
         <meta
           key="share-image"
           property="og:image"
@@ -49,7 +49,7 @@ export default function Home(props: { data: [] }) {
         />
         <meta
           property="og:url"
-          content="https://data.irozhlas.cz/darek-or-not/"
+          content="https://data.irozhlas.cz/cukrovi-or-not/"
         />
         <meta
           property="og:description"
@@ -75,11 +75,11 @@ export default function Home(props: { data: [] }) {
       </Head>
       {props.data.length > 0 && (
         <div className={styles.container}>
-          <Header text="Co by vás potěšilo víc?"></Header>
+          <Header text="Co si radši dáte?"></Header>
           <h3 className={styles.subtitle}>
             {history.length > 0
-              ? `Vyberte další dárek`
-              : "Klikněte na jeden z dárků"}
+              ? `Vyberte další cukroví`
+              : "Klikněte na jeden druh cukroví"}
           </h3>
           <MainPanel
             data={props.data}
@@ -110,10 +110,10 @@ export default function Home(props: { data: [] }) {
 
             </p>
             <p>
-            V primitivní interaktivní aplikaci jednoduše klepnete na to, co byste sami dostali k Vánocům raději. Představte si, že vám to nadělí někdo z běžné skupiny lidí, se kterými si vyměňujete dárky. Nevíte však, kdo přesně. O konkrétní podobě dárku (jaký vzor má šála, ve kterých kinech platí kupon atd.) rozhoduje darující, pro vás to bude překvapení.
+              V primitivní interaktivní aplikaci jednoduše klepnete na to, co byste sami dostali k Vánocům raději. Představte si, že vám to nadělí někdo z běžné skupiny lidí, se kterými si vyměňujete dárky. Nevíte však, kdo přesně. O konkrétní podobě dárku (jaký vzor má šála, ve kterých kinech platí kupon atd.) rozhoduje darující, pro vás to bude překvapení.
             </p>
             <p>
-            Dárky pro srovnání jsme vybrali podle jednoduchých klíčů: jde o dary kupované, maximálně za vyšší stovky korun, nijak zvlášť originální, neberoucí v potaz pohlaví, koníčky ani například preferovaný způsob přepravy obdarovávaných. Nenajdete tedy mezi nimi zájezd k moři, akvarijní rybičky ani škrabku na auto. Předpokládáme však běžný životní styl - tedy že obdarovaní párkrát za rok vyrazí za kulturou či sportem nebo se občas napijí alkoholu.
+              Dárky pro srovnání jsme vybrali podle jednoduchých klíčů: jde o dary kupované, maximálně za vyšší stovky korun, nijak zvlášť originální, neberoucí v potaz pohlaví, koníčky ani například preferovaný způsob přepravy obdarovávaných. Nenajdete tedy mezi nimi zájezd k moři, akvarijní rybičky ani škrabku na auto. Předpokládáme však běžný životní styl - tedy že obdarovaní párkrát za rok vyrazí za kulturou či sportem nebo se občas napijí alkoholu.
             </p>
             <p><em>Ilustrační obrázky jsme vygenerovali ve Stable Diffusion a DALL-E, chtěli jsme po nich ilustrace ve stylu východoevropského grafického designu 60. let.</em></p>
           </div>
@@ -126,7 +126,7 @@ export default function Home(props: { data: [] }) {
 
 export async function getStaticProps() {
   const data = await fetch(
-    "https://data.irozhlas.cz/hot-or-not-data/darky.json"
+    "https://data.irozhlas.cz/hot-or-not-data/cukrovi.json"
   ).then(res => res.json());
   return {
     props: {

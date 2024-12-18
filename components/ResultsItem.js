@@ -9,7 +9,7 @@ const ResultsItem = props => {
       <div className={styles.container}>
         <Image
           className={styles.image}
-          src={`https://data.irozhlas.cz/darek-or-not/img/${props.candidate.key}-75.png`}
+          src={`https://data.irozhlas.cz/cukrovi-or-not/img/${props.candidate.key}-75.png`}
           alt={props.candidate.name}
           width={75}
           height={75}
@@ -17,18 +17,16 @@ const ResultsItem = props => {
         <div className={styles.textbox}>
           <p className={styles.note}>
             <strong>
-              {`${props.index}. ${
-                props.dativ ? props.candidate.dativ : props.candidate.name
-              }`}{" "}
+              {`${props.index}. ${props.dativ ? props.candidate.dativ : props.candidate.name
+                }`}{" "}
             </strong>
           </p>
-          <p className={styles.note}>{`${
-            props.dativ
+          <p className={styles.note}>{`${props.dativ
               ? 100 - props.candidateResults.pct
               : props.candidateResults.pct
-          } % vítězství z  ${(
-            props.candidateResults.w + props.candidateResults.l
-          ).toLocaleString("cs-CZ")} duelů`}</p>
+            } % vítězství z  ${(
+              props.candidateResults.w + props.candidateResults.l
+            ).toLocaleString("cs-CZ")} duelů`}</p>
         </div>
       </div>
     </Link>

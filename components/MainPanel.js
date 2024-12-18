@@ -1,7 +1,12 @@
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect, useEffect } from "react";
 import Item from "./Item";
 import styles from "../styles/MainPanel.module.css";
 import { useRouter } from "next/router";
+
+
+const useIsomorphicLayoutEffect = typeof window !== 'undefined'
+  ? useLayoutEffect
+  : useEffect;
 
 const pickRandomCandidates = (candidates, prevCandidates) => {
   const prevCandidatesIDs = prevCandidates.map(c => [c[0], c[1]]);
@@ -53,11 +58,11 @@ const MainPanel = props => {
       // save tip to dynamodb
       const http = new XMLHttpRequest();
       const url =
-        "https://2sc7lqahghwdegw3ke7pctis7i0twier.lambda-url.eu-central-1.on.aws/";
+        "https://msr4dkp7doyf3ym25gng4mj53m0wnwcr.lambda-url.eu-central-1.on.aws/";
       http.open("POST", url);
       http.send(
         JSON.stringify({
-          appID: "darky",
+          appID: "cukrovi",
           winnerID: candidate.id,
           loserID: candidates.filter(c => c.id !== candidate.id)[0].id,
           url: document.URL,
@@ -85,7 +90,7 @@ const MainPanel = props => {
     }
   };
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     setCandidates(pickRandomCandidates(props.data, props.history));
   }, [props.data, props.history]);
 

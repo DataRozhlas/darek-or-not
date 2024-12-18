@@ -54,8 +54,8 @@ const params = {
       Quantity: 2,
       /* required */
       Items: [
-        "/hot-or-not-results/darky-stats.json",
-        "/hot-or-not-results/darky-status.json",
+        "/hot-or-not-results/cukrovi-stats.json",
+        "/hot-or-not-results/cukrovi-status.json",
       ],
     },
   },
@@ -80,17 +80,17 @@ exports.handler = async (event, context) => {
   };
 
   const lastID = await getDataFromAPI(
-    "https://datarozhlas.s3.eu-central-1.amazonaws.com/hot-or-not-results/darky-status.json",
+    "https://datarozhlas.s3.eu-central-1.amazonaws.com/hot-or-not-results/cukrovi-status.json",
     {}
   );
   const oldData = await getDataFromAPI(
-    "https://datarozhlas.s3.eu-central-1.amazonaws.com/hot-or-not-results/darky-stats.json",
+    "https://datarozhlas.s3.eu-central-1.amazonaws.com/hot-or-not-results/cukrovi-stats.json",
     {}
   );
 
   try {
     await getAllData({
-      TableName: "darek-or-not",
+      TableName: "cukrovi-or-not",
     });
 
     const jenPlatne = await allData.filter(item => item.uid > lastID.lastID);
@@ -157,10 +157,10 @@ exports.handler = async (event, context) => {
         ? Math.max(...jenPlatne.map(item => item.uid))
         : lastID.lastID;
 
-    await uploadFileOnS3(result, "hot-or-not-results/darky-stats.json");
+    await uploadFileOnS3(result, "hot-or-not-results/cukrovi-stats.json");
     await uploadFileOnS3(
       { lastID: newLastID },
-      "hot-or-not-results/darky-status.json"
+      "hot-or-not-results/cukrovi-status.json"
     );
 
     await cloudfront.createInvalidation(params).promise();
