@@ -43,6 +43,14 @@ const MainPanel = props => {
   const [candidates, setCandidates] = useState([props.data[0], props.data[1]]);
   const [sex, setSex] = useState("all");
   const [age, setAge] = useState("all");
+  const [sessionId, setSessionId] = useState(null);
+
+  useEffect(() => {
+    // Create session ID on component mount
+    setSessionId(crypto.randomUUID());
+  }, []);
+
+
   let lastClickTime = Date.now();
 
   const handleSexChange = (e) => {
@@ -69,7 +77,8 @@ const MainPanel = props => {
           ref: document.referrer,
           draw: false,
           age: age,
-          sex: sex
+          sex: sex,
+          sid: sessionId
         })
       );
     }
