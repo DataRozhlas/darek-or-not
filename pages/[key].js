@@ -39,11 +39,11 @@ const DetailsPage = props => {
         <meta
           key="share-image"
           property="og:image"
-          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_facebook/public/uploader/screenshot_2023-12-1_231211-145214_pek.png?itok=jFPMfLNa"
+          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_facebook/public/uploader/screenshot_2024-12-1_241219-234114_pek.png?itok=FdXCRKfD"
         />
         <meta
           property="og:title"
-          content={`Průběžné výsledky ${candidateDetails.genitiv} v rozstřelu vánočních dárků`}
+          content={`Průběžné výsledky ${candidateDetails.genitiv} v rozstřelu vánočního cukroví`}
         />
         <meta
           property="og:url"
@@ -52,7 +52,7 @@ const DetailsPage = props => {
         <meta
           property="og:description"
           content={
-            "Datový tým Českého rozhlasu hledá vánoční dárky, které potěší každého. Můžete s tím pomoci minutou bezmyšlenkovitého klikání."
+            "V máslovém oktagonu se rozhodne o šampionovi patrových podnosů. Přispěje k tomu minuta vašeho bezmyšlenkovitého klikání."
           }
         />
         <meta name="twitter:card" content="summary_large_image" />
@@ -60,15 +60,15 @@ const DetailsPage = props => {
         <meta name="twitter:creator" content="@datarozhlas" />
         <meta
           name="twitter:title"
-          content={`Průběžné výsledky ${candidateDetails.genitiv} v rozstřelu vánočních dárků`}
+          content={`Průběžné výsledky ${candidateDetails.genitiv} v rozstřelu vánočního cukroví`}
         />
         <meta
           name="twitter:image"
-          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_twitter/public/uploader/screenshot_2023-12-1_231211-145214_pek.png?itok=nRNn6Te9"
+          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_twitter/public/uploader/screenshot_2024-12-1_241219-234114_pek.png?itok=f7-oFhzw"
         />
         <meta
           name="twitter:description"
-          content="Datový tým Českého rozhlasu hledá vánoční dárky, které potěší každého. Můžete s tím pomoci minutou bezmyšlenkovitého klikání."
+          content="V máslovém oktagonu se rozhodne o šampionovi patrových podnosů. Přispěje k tomu minuta vašeho bezmyšlenkovitého klikání."
         />
       </Head>
       {candidateDetails && results.length > 0 && (

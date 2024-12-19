@@ -41,11 +41,11 @@ export default function Home(props: { data: [] }) {
         <meta
           key="share-image"
           property="og:image"
-          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_facebook/public/uploader/screenshot_2023-12-1_231211-145214_pek.png?itok=jFPMfLNa"
+          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_facebook/public/uploader/screenshot_2024-12-1_241219-234114_pek.png?itok=FdXCRKfD"
         />
         <meta
           property="og:title"
-          content="Ponožky, nebo knihu? Pomozte nám zjistit, co kdo doopravdy chce pod stromeček"
+          content="Perníčky, linecké, nebo pracny? Pomozte seřadit vánoční cukroví podle oblíbenosti"
         />
         <meta
           property="og:url"
@@ -54,7 +54,7 @@ export default function Home(props: { data: [] }) {
         <meta
           property="og:description"
           content={
-            "Datový tým Českého rozhlasu hledá vánoční dárky, které potěší každého. Můžete s tím pomoci minutou bezmyšlenkovitého klikání."
+            "V máslovém oktagonu se rozhodne o šampionovi patrových podnosů. Přispěje k tomu minuta vašeho bezmyšlenkovitého klikání."
           }
         />
         <meta name="twitter:card" content="summary_large_image" />
@@ -62,15 +62,15 @@ export default function Home(props: { data: [] }) {
         <meta name="twitter:creator" content="@datarozhlas" />
         <meta
           name="twitter:title"
-          content="Ponožky, nebo knihu? Pomozte nám zjistit, co kdo doopravdy chce pod stromeček"
+          content="Perníčky, linecké, nebo pracny? Pomozte seřadit vánoční cukroví podle oblíbenosti"
         />
         <meta
           name="twitter:image"
-          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_twitter/public/uploader/screenshot_2023-12-1_231211-145214_pek.png?itok=nRNn6Te9"
+          content="https://www.irozhlas.cz/sites/default/files/styles/zpravy_twitter/public/uploader/screenshot_2024-12-1_241219-234114_pek.png?itok=f7-oFhzw"
         />
         <meta
           name="twitter:description"
-          content="Datový tým Českého rozhlasu hledá vánoční dárky, které potěší každého. Můžete s tím pomoci minutou bezmyšlenkovitého klikání."
+          content="V máslovém oktagonu se rozhodne o šampionovi patrových podnosů. Přispěje k tomu minuta vašeho bezmyšlenkovitého klikání."
         />
       </Head>
       {props.data.length > 0 && (
@@ -111,7 +111,7 @@ export default function Home(props: { data: [] }) {
             <p>
               Data opět sbíráme jednoduchým systémem <em>hot or not</em>. Dokud vás to nepřestane bavit, vybírejte níže ze dvou cukroví to, po kterém byste sáhli raději. Neřešte při tom ceny surovin ani pracnost přípravy – pouze se krmte.
             </p>
-            <p><em>Autorkou fotografií je Zuzana Jarolímková.</em></p>
+            <p><em>Autorkami fotografií jsou Zuzana Jarolímková, Marie Starostová a Marcela Bočková.</em></p>
           </div>
           <RelatedArticles tag={85699} name={"Vánocích"}></RelatedArticles>
         </div>
